@@ -1,10 +1,8 @@
+
 <script setup>
-import CoffeePlan from "./components/CoffeePlan.vue";
-
-import { ref } from "vue";
-
-const plans = ref(["The Single", "The Curious", "The Addict", "The Hacker"]);
+import PlanPicker from "./components/PlanPicker.vue";
 </script>
+
 
 <template>
   <div class="content">
@@ -14,9 +12,7 @@ const plans = ref(["The Single", "The Curious", "The Addict", "The Hacker"]);
       We travel the world to source the very best single origin coffee for you
     </h2>
 
-    <div class="plans">
-      <CoffeePlan v-for="plan in plans" :key="plan" :planName="plan" />
-    </div>
+    <PlanPicker />
   </div>
 </template>
 
